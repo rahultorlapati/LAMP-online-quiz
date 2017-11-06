@@ -27,8 +27,19 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
+input[type=button] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
-
+}
+input[type=button]:hover {
+    background-color: #45a049;
+}
 input[type=submit]:hover {
     background-color: #45a049;
 }
@@ -41,7 +52,7 @@ div {
 </style>
 <div>
     <head>  
-    <body background="bgimg.png">         
+    <body background="bgimg.jpg">         
         <title>Response page</title>
     </head>
     <body>
@@ -84,7 +95,8 @@ $conn->close();
 
                                           
                         
-             <input type="submit" value="Add another" style="width: 99%">           
+             <input type="submit" value="Add another" style="width: 99%"> 
+	<input type="button" value="Home" onclick="window.location.href='main.html'" style="width: 99%">          
             </td>
         </tr>
     </form>
