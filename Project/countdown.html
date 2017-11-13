@@ -1,0 +1,46 @@
+<html>
+<style>
+body {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 150px;
+    color: #be7429;
+    padding-top: 5cm;
+    text-align: center;
+    justify-content: center;
+}
+</style>
+<body>
+<head>
+<script>
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+
+            if (timer-- < 1) {
+                window.location = "ques1.php";
+                clearInterval(timer);
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        var fiveMinutes = 4,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
+</script>
+</head>
+<body background="bgimg.jpg">
+    <span id="time">00:05</span>
+    <form id="form1" runat="server">
+
+    </form>
+</body>
+</html>
